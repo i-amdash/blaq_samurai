@@ -45,7 +45,7 @@ const NewArrivals = () => {
           src={arrivalsGif}
           alt="New Arrivals Animation"
           fill
-          className="object-cover py-8"
+          className="object-cover px-8 py-8"
           priority
         />
       </div>

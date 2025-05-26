@@ -18,12 +18,12 @@ const HomeCollections = () => {
     <section className="relative h-full py-16 flex flex-col items-center">
       <div className="absolute inset-0 bg-grain mix-blend-multiply" />
       <div className="flex flex-row justify-center items-center">
-        <p className="font-bold text-primary text-7xl uppercase">
+        <p className="font-bold text-primary xl:text-7xl text-2xl uppercase">
           Best Collections
         </p>
       </div>
       <div className="flex flex-wrap justify-start items-center max-w-7xl w-full gap-4 px-8 py-12 z-10">
-        <div className="relative text-white p-8 shadow-lg w-[32%] h-[70vh] flex flex-col justify-center items-center group overflow-hidden">
+        <div className="relative text-white p-8 shadow-lg lg:w-[32%] md:w-[48%] w-full h-[50vh] lg:h-[70vh] flex flex-col justify-center items-center group overflow-hidden">
           <Image
             src={aboutImage}
             alt="collection image"
@@ -40,7 +40,7 @@ const HomeCollections = () => {
             </div>
           </div>
         </div>
-        <div className="relative text-white p-8 shadow-lg w-[32%] h-[70vh] flex flex-col justify-center items-center group overflow-hidden">
+        <div className="relative text-white p-8 shadow-lg lg:w-[32%] md:w-[48%] w-full h-[50vh] lg:h-[70vh]  flex flex-col justify-center items-center group overflow-hidden">
           <Image
             src={aboutImage2}
             alt="collection image"
@@ -57,7 +57,7 @@ const HomeCollections = () => {
             </div>
           </div>
         </div>
-        <div className="relative text-white p-8 shadow-lg w-[32%] h-[70vh] flex flex-col justify-center items-center group overflow-hidden">
+        <div className="relative text-white p-8 shadow-lg lg:w-[32%] md:w-[48%] w-full h-[50vh] lg:h-[70vh]  flex flex-col justify-center items-center group overflow-hidden">
           <Image
             src={aboutImage3}
             alt="collection image"
@@ -74,7 +74,7 @@ const HomeCollections = () => {
             </div>
           </div>
         </div>
-        <div className="relative text-white p-8 shadow-lg w-[32%] h-[70vh] flex flex-col justify-center items-center group overflow-hidden">
+        <div className="relative text-white p-8 shadow-lg lg:w-[32%] md:w-[48%] w-full h-[50vh] lg:h-[70vh]  flex flex-col justify-center items-center group overflow-hidden">
           <Image
             src={aboutImage2}
             alt="collection image"

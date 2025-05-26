@@ -17,12 +17,12 @@ const AboutSection = () => {
   }
 
   return (
-    <section className="relative h-screen">
+    <section className="relative h-full">
       <div className="absolute inset-0 bg-grain mix-blend-multiply" />
       {/* <section className='flex flex-row h-screen bg-gradient-to-br from-primary via-white to-white'> */}
-      <div className="relative z-10 flex flex-row w-full max-w-7xl space-x-4 px-8 py-16 mx-auto">
-        <div className="flex flex-col w-[33%]">
-          <div className="h-[70vh] w-full flex">
+      <div className="relative z-10 flex flex-col md:flex-row w-full max-w-7xl space-x-4 space-y-8 px-8 py-16 mx-auto">
+        <div className="flex flex-col w-full md:w-[33%]">
+          <div className="md:h-[70vh] h-full w-full flex">
             <Image
               src={aboutImage}
               alt="About Image"
@@ -30,18 +30,18 @@ const AboutSection = () => {
             />
           </div>
           <div className="mt-6 flex items-center space-x-2">
-            <GiBloodySword className="text-3xl text-primary" />
-            <span className="text-xl font-medium uppercase text-slate-950">
+            <GiBloodySword className="md:text-3xl text-xl text-primary" />
+            <span className="md:text-xl text-lg font-medium uppercase text-slate-950">
               Best Selling Brand
             </span>
           </div>
         </div>
-        <div className="flex flex-col justify-start items-center px-8 space-y-8 w-[42%]">
-          <h1 className="text-6xl font-bold text-primary uppercase">
+        <div className="flex flex-col justify-start items-center md:px-8 md:space-y-8 space-y-4 w-full md:w-[42%]">
+          <h1 className="lg:text-6xl text-2xl md:text-4xl font-bold text-primary uppercase">
             the best choice for those
             who appreciate true quality, meticulous attention to detail.
           </h1>
-          <p className="text-sm mt-4 text-justify font-light text-gray-700">
+          <p className="text-sm mt-4 pr-4 md:pr-0 text-justify font-light text-gray-700">
             Welcome to BLAQ SAMURAI, where tradition meets innovation. Our
             passion for crafting exceptional shirts is rooted in a deep
             respect for the art of creation. Each piece we offer is a testament
@@ -60,25 +60,25 @@ const AboutSection = () => {
             who appreciate true quality.
           </p> */}
         </div>
-        <div className="flex flex-col items-center space-y-8 w-[21%]">
-            <div className="h-[35vh] flex">
+        <div className="md:flex hidden flex-col justify-start items-center space-y-8 w-[25%]">
+            <div className="h-[35vh] w-full flex">
             <Image
               src={aboutImage2}
               alt="About Image"
-              className="h-full w-full object-contain shadow-lg"
+              className="h-full w-full object-contain"
             />
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="flex justify-center items-center space-x-2">
             <GiBloodySword className="text-3xl text-primary" />
             <span className="text-xl font-medium uppercase text-slate-950">
-              Internation brand
+              International brand
             </span>
           </div>
-          <div className="h-[35vh] flex">
+          <div className="h-[35vh] w-full flex">
             <Image
               src={aboutImage3}
               alt="About Image"
-              className="h-full w-full object-contain shadow-lg"
+              className="h-full w-full object-contain"
             />
           </div>
         </div>
