@@ -20,7 +20,7 @@ const AboutSection = () => {
     <section className="relative h-full">
       <div className="absolute inset-0 bg-grain mix-blend-multiply" />
       {/* <section className='flex flex-row h-screen bg-gradient-to-br from-primary via-white to-white'> */}
-      <div className="relative z-10 flex flex-col md:flex-row w-full max-w-7xl space-x-4 space-y-8 px-8 py-16 mx-auto">
+      <div className="relative z-10 flex flex-col md:flex-row w-full max-w-7xl md:space-x-4 space-y-8 px-8 py-16 mx-auto">
         <div className="flex flex-col w-full md:w-[33%]">
           <div className="md:h-[70vh] h-full w-full flex">
             <Image
@@ -41,7 +41,7 @@ const AboutSection = () => {
             the best choice for those
             who appreciate true quality, meticulous attention to detail.
           </h1>
-          <p className="text-sm mt-4 pr-4 md:pr-0 text-justify font-light text-gray-700">
+          <p className="text-sm mt-4 text-justify font-light text-gray-700">
             Welcome to BLAQ SAMURAI, where tradition meets innovation. Our
             passion for crafting exceptional shirts is rooted in a deep
             respect for the art of creation. Each piece we offer is a testament
