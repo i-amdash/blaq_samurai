@@ -1,4 +1,5 @@
 import AboutSection from "@/components/AboutSection";
+import Footer from "@/components/Footer";
 import HomeCollections from "@/components/HomeCollections";
 import HomeProducts from "@/components/HomeProducts";
 import Marquee from "@/components/Marquee";
@@ -20,6 +21,7 @@ export default function RootLayout({
       <NewArrivals />
       <HomeProducts />
       <HomeCollections />
+      <Footer />
     </>
   );
 }
