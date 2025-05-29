@@ -22,7 +22,7 @@ const AboutSection = () => {
       {/* <section className='flex flex-row h-screen bg-gradient-to-br from-primary via-white to-white'> */}
       <div className="relative z-10 flex flex-col md:flex-row w-full max-w-7xl md:space-x-4 space-y-8 px-8 py-16 mx-auto">
         <div className="flex flex-col w-full md:w-[33%]">
-          <div className="md:h-[70vh] h-full w-full flex">
+          <div className="h-full w-full flex">
             <Image
               src={aboutImage}
               alt="About Image"
