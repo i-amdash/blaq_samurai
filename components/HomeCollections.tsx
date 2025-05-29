@@ -1,5 +1,5 @@
 "use client";
-import { aboutImage, aboutImage2, aboutImage3 } from "@/utils";
+import { aboutImage, aboutImage2, aboutImage3, asapImage, burnaImage, odumoduImage, orangeImage } from "@/utils";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
@@ -25,7 +25,7 @@ const HomeCollections = () => {
       <div className="flex flex-wrap justify-start items-center max-w-7xl w-full gap-4 px-8 py-12 z-10">
         <div className="relative text-white p-8 shadow-lg lg:w-[32%] md:w-[48%] w-full h-[50vh] lg:h-[70vh] flex flex-col justify-center items-center group overflow-hidden">
           <Image
-            src={aboutImage}
+            src={burnaImage}
             alt="collection image"
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 absolute inset-0"
             priority
@@ -42,7 +42,7 @@ const HomeCollections = () => {
         </div>
         <div className="relative text-white p-8 shadow-lg lg:w-[32%] md:w-[48%] w-full h-[50vh] lg:h-[70vh]  flex flex-col justify-center items-center group overflow-hidden">
           <Image
-            src={aboutImage2}
+            src={orangeImage}
             alt="collection image"
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 absolute inset-0"
             priority
@@ -59,7 +59,7 @@ const HomeCollections = () => {
         </div>
         <div className="relative text-white p-8 shadow-lg lg:w-[32%] md:w-[48%] w-full h-[50vh] lg:h-[70vh]  flex flex-col justify-center items-center group overflow-hidden">
           <Image
-            src={aboutImage3}
+            src={odumoduImage}
             alt="collection image"
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 absolute inset-0"
             priority
@@ -76,7 +76,7 @@ const HomeCollections = () => {
         </div>
         <div className="relative text-white p-8 shadow-lg lg:w-[32%] md:w-[48%] w-full h-[50vh] lg:h-[70vh]  flex flex-col justify-center items-center group overflow-hidden">
           <Image
-            src={aboutImage2}
+            src={asapImage}
             alt="collection image"
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 absolute inset-0"
             priority

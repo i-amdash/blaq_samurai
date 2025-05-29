@@ -50,9 +50,7 @@ const AboutSection = () => {
             style with timeless elegance, ensuring that each shirt becomes a cherished
             part of your wardrobe.
           </p>
-          {/* <p className="text-sm mt-4 text-justify font-light text-gray-700">
-            
-          </p>
+          {/* 
           <p className="text-sm mt-4 text-justify font-light text-gray-700">
             From premium materials to meticulous attention to detail, every BLAQ SAMURAI
             shirt embodies our dedication to excellence. Join us in celebrating the art

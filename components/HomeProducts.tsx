@@ -1,6 +1,6 @@
 "use client";
 
-import { aboutImage, aboutImage3 } from "@/utils";
+import { aboutImage, aboutImage3, asapImage2, yellowImage } from "@/utils";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
@@ -19,12 +19,12 @@ const HomeProducts = () => {
       <div className="w-full max-w-7xl">
         <div className="xl:h-[70vh] h-full flex flex-col xl:flex-row justify-center items-center space-y-4 xl:space-y-0 xl:space-x-4">
           <Image
-            src={aboutImage}
+            src={yellowImage}
             alt="Product Image"
             className="object-cover h-full w-full"
           />
           <Image
-            src={aboutImage3}
+            src={asapImage2}
             alt="Product Image"
             className="object-cover h-full w-full"
           />
