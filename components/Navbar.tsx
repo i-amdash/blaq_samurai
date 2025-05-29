@@ -27,7 +27,7 @@ const Navbar = () => {
       {/* Main bar */}
       <nav className="mx-auto flex h-16 max-w-7xl lg:max-w-fit items-center justify-between px-4 md:px-6 lg:px-16 lg:rounded-full lg:border-primary/20 lg:border lg:shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] lg:justify-center overflow-x-hidden lg:space-x-8" style={{
           backdropFilter: "blur(16px) saturate(180%)",
-          backgroundColor: "rgba(114,85,60, 0.45)",
+          backgroundColor: "rgba(6,80,96, 0.25)",
         }}>
         {/* Mobile – hamburger */}
         <button
@@ -79,7 +79,7 @@ const Navbar = () => {
           <ul className="space-y-4 border-t border-white/20 px-4 py-6 backdrop-blur-lg uppercase text-sm font-light"
           style={{
           backdropFilter: "blur(16px) saturate(180%)",
-          backgroundColor: "rgba(114,85,60, 0.45)",
+          backgroundColor: "rgba(6,80,96, 0.45)",
         }}>
             <li className="cursor-pointer"><a href="/">Home</a></li>
             <li className="cursor-pointer"><a href="/shop">Shop</a></li>
