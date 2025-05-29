@@ -40,7 +40,7 @@ const NewArrivals = () => {
           <FaStarOfLife className="md:text-5xl text-2xl " />
         </div>
       </div>
-      <div className="flex-1 max-w-7xl px-8 py-8 w-full relative">
+      <div className="flex-1 max-w-7xl py-8 w-full relative">
         <Image
           src={arrivalsGif}
           alt="New Arrivals Animation"

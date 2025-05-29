@@ -16,7 +16,7 @@ const HomeProducts = () => {
   }
   return (
     <section className="flex flex-col relative space-y-16 bg-primary items-center px-8 py-8 text-white h-full">
-      <div className="w-full max-w-7xl">
+      <div className="w-full max-w-7xl 2xl:px-8">
         <div className="xl:h-[70vh] h-full flex flex-col xl:flex-row justify-center items-center space-y-4 xl:space-y-0 xl:space-x-4">
           <Image
             src={yellowImage}

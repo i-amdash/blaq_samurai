@@ -1,6 +1,6 @@
 "use client";
 
-import { aboutImage, aboutImage2, aboutImage3 } from "@/utils";
+import { aboutImage, aboutImage2, aboutImage3, emblemImage } from "@/utils";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { GiBloodySword } from "react-icons/gi";
@@ -30,7 +30,12 @@ const AboutSection = () => {
             />
           </div>
           <div className="mt-6 flex items-center space-x-2">
-            <GiBloodySword className="md:text-3xl text-xl text-primary" />
+            <Image 
+              src={emblemImage}
+              alt="Emblem"
+              className="h-8 w-8 object-contain"
+              priority
+            />
             <span className="md:text-xl text-lg font-medium uppercase text-slate-950">
               Best Selling Brand
             </span>
@@ -67,7 +72,12 @@ const AboutSection = () => {
             />
           </div>
           <div className="flex justify-center items-center space-x-2">
-            <GiBloodySword className="text-3xl text-primary" />
+            <Image 
+              src={emblemImage}
+              alt="Emblem"
+              className="h-8 w-8 object-contain"
+              priority
+            />
             <span className="text-xl font-medium uppercase text-slate-950">
               International brand
             </span>

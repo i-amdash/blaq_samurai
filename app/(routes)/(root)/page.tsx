@@ -34,14 +34,14 @@ export default function Home() {
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-10 px-4">
           <h1 className="text-4xl md:text-6xl lg:text-7xl max-w-3xl font-bold text-center mb-4">
-            Embodying excellence through fashion.
+            Blaq Samurai
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl font-light text-center max-w-2xl mb-8 text-gray-200">
             Discover our exclusive collection of premium clothing designed for those who dare to stand out
           </p>
-          <button className="px-8 py-2 border border-1 hover:border-none text-white text-lg font-light rounded-full hover:bg-primary transition-all duration-300 transform hover:scale-105">
+          <a href="/shop" className="px-8 py-2 cursor-pointer border border-1 hover:border-none text-white text-lg font-light rounded-full hover:bg-primary transition-all duration-300 transform hover:scale-105">
             Shop Now
-          </button>
+          </a>
         </div>
       </div>
     </div>
