@@ -44,7 +44,8 @@ export const metadata: Metadata = {
   title: "Blaq Samurai",
   description: "A clothing store for the modern samurai",
   icons: {
-    icon: "/logo.webp",
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
 
