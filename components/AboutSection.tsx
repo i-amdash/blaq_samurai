@@ -17,7 +17,7 @@ const AboutSection = () => {
   }
 
   return (
-    <section className="relative h-full">
+    <section className="relative h-full bg-white">
       <div className="absolute inset-0 bg-grain mix-blend-multiply" />
       {/* <section className='flex flex-row h-screen bg-gradient-to-br from-primary via-white to-white'> */}
       <div className="relative z-10 flex flex-col md:flex-row w-full max-w-7xl md:space-x-4 space-y-8 px-8 py-16 mx-auto">

@@ -15,7 +15,7 @@ const HomeCollections = () => {
   }
 
   return (
-    <section className="relative h-full py-16 flex flex-col items-center">
+    <section className="relative h-full py-16 bg-white flex flex-col items-center">
       <div className="absolute inset-0 bg-grain mix-blend-multiply" />
       
       <div className="w-full overflow-x-auto z-10 scrollbar-hide">
