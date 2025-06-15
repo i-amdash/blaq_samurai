@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Nunito, Quicksand, Montserrat } from "next/font/google";
+import { Inter, Nunito, Quicksand, Montserrat, Jost } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -33,7 +33,7 @@ const aptos = localFont({
   variable: '--font-aptos',
 });
 
-const nunito = Nunito({
+const nunito = Jost({
 // const nunito = Quicksand({
   subsets: ["latin"],
   weight: ["400", "500", "700"], // Choose the weights you need
@@ -56,7 +56,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={aptos.className}>{children}</body>
+      <body className={nunito.className}>{children}</body>
     </html>
   );
 }

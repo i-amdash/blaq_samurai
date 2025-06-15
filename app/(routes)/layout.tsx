@@ -16,11 +16,11 @@ export default function RootLayout({
     <>
       <Navbar />
       {children}
-      <Marquee />
+      <HomeCollections />
+      {/* <Marquee /> */}
       <AboutSection />
       <NewArrivals />
       <HomeProducts />
-      <HomeCollections />
       <Footer />
     </>
   );

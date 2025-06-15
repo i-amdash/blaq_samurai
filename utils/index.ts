@@ -22,6 +22,10 @@ import orange2 from '/public/Images/orange2.webp';
 import plain from '/public/Images/plain.webp';
 import plain2 from '/public/Images/plain2.webp';
 import yellow from '/public/Images/yellow.webp';
+import collectoion1 from '/public/Images/collection1.png';
+import collectoion2 from '/public/Images/collection2.png';
+import collectoion3 from '/public/Images/collection3.png';
+import collectoion4 from '/public/Images/collection4.png';
 
 
 export const homeImage = home;
@@ -48,3 +52,7 @@ export const orange2Image = orange2;
 export const plainImage = plain;
 export const plain2Image = plain2;
 export const yellowImage = yellow;
+export const collection1Image = collectoion1;
+export const collection2Image = collectoion2;
+export const collection3Image = collectoion3;
+export const collection4Image = collectoion4;
