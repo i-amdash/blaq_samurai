@@ -56,8 +56,8 @@ const Navbar = () => {
         <ul className="hidden lg:flex lg:items-center lg:space-x-8 uppercase text-sm font-light">
           <li className="cursor-pointer transition hover:text-gray-300"><a href="/">Home</a></li>
           <li className="cursor-pointer transition hover:text-gray-300"><a href="/shop">Shop</a></li>
-          <li className="cursor-pointer transition hover:text-gray-300">Brand</li>
-          <li className="cursor-pointer transition hover:text-gray-300">Customize</li>
+          <li className="cursor-pointer transition hover:text-gray-300"><a href="/brand">Brand</a></li>
+          <li className="cursor-pointer transition hover:text-gray-300"><a href="/customize">Customize</a></li>
         </ul>
 
          {/* Brand */}
@@ -83,8 +83,8 @@ const Navbar = () => {
         }}>
             <li className="cursor-pointer"><a href="/">Home</a></li>
             <li className="cursor-pointer"><a href="/shop">Shop</a></li>
-            <li className="cursor-pointer">Brand</li>
-            <li className="cursor-pointer">Customize</li>
+            <li className="cursor-pointer"><a href="/brand">Brand</a></li>
+            <li className="cursor-pointer"><a href="/customize">Customize</a></li>
             {/* <li className="mt-4 cursor-pointer border-t border-white/10 pt-4">Account</li>
             <li className="flex items-center space-x-6 pt-2 text-xl">
               <FaMagnifyingGlass className="cursor-pointer" />

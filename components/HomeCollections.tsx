@@ -22,7 +22,7 @@ const HomeCollections = () => {
         <div className="flex flex-nowrap gap-4 min-w-max lg:min-w-0">
           {/* First Card */}
           <a href="https://store.blaqsamurai.com/collections/custom-orders" className=" w-[85vw] sm:w-[70vw] md:w-[45vw] lg:w-[23%] cursor-pointer flex-shrink-0 flex flex-col group overflow-hidden">
-            <div className="h-[45vh] overflow-hidden">
+            <div className="h-[25vh] overflow-hidden">
               <Image
                 src={collection1Image}
                 alt="collection image"
@@ -37,7 +37,7 @@ const HomeCollections = () => {
 
           {/* Second Card */}
           <a href="https://store.blaqsamurai.com/collections/the-orange-collection" className=" w-[85vw] sm:w-[70vw] md:w-[45vw] lg:w-[23%] cursor-pointer flex-shrink-0 flex flex-col group overflow-hidden">
-            <div className="h-[45vh] overflow-hidden">
+            <div className="h-[25vh] overflow-hidden">
               <Image
                 src={collection2Image}
                 alt="collection image"
@@ -52,7 +52,7 @@ const HomeCollections = () => {
 
           {/* Third Card */}
           <a href="https://store.blaqsamurai.com/collections/featured-collections" className=" w-[85vw] sm:w-[70vw] md:w-[45vw] lg:w-[23%] cursor-pointer flex-shrink-0 flex flex-col group overflow-hidden">
-            <div className="h-[45vh] overflow-hidden">
+            <div className="h-[25vh] overflow-hidden">
               <Image
                 src={collection3Image}
                 alt="collection image"
@@ -67,7 +67,7 @@ const HomeCollections = () => {
 
           {/* Fourth Card */}
           <a href="https://store.blaqsamurai.com/collections/totem-automobili" className="w-[85vw] sm:w-[70vw] md:w-[45vw] lg:w-[23%] cursor-pointer flex-shrink-0 flex flex-col group overflow-hidden">
-            <div className="h-[45vh] overflow-hidden">
+            <div className="h-[25vh] overflow-hidden">
               <Image
                 src={collection4Image}
                 alt="collection image"
