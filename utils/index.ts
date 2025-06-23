@@ -55,4 +55,4 @@ export const yellowImage = yellow;
 export const collection1Image = collectoion1;
 export const collection2Image = collectoion2;
 export const collection3Image = collectoion3;
-export const collection4Image = collectoion4;
+export const collection4Image = collectoion4; 
