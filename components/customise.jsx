@@ -3,7 +3,7 @@
 // import Circles from "@/components/Circles";
 import Canvas from "@/components/canvas";
 import Customizer from "@/components/Customizer";
-import Home from "@/components/home";
+import Home from "@/components/Home";
 
 const CustomisePage = () => {
   return (
