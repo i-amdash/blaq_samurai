@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, Nunito, Quicksand, Montserrat, Jost } from "next/font/google";
+import { Jost } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-
-// const inter = Inter({ subsets: ["latin"] });
+import { LoadingProvider } from "@/components/LoadingContext";
+import AppLoader from "@/components/AppLoader";
 
 const aptos = localFont({
   src: [
@@ -34,9 +33,8 @@ const aptos = localFont({
 });
 
 const nunito = Jost({
-// const nunito = Quicksand({
   subsets: ["latin"],
-  weight: ["400", "500", "700"], // Choose the weights you need
+  weight: ["400", "500", "700"],
   display: "swap",
 });
 
@@ -56,7 +54,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={nunito.className}>{children}</body>
+      <body className={nunito.className}>
+        <LoadingProvider>
+          <AppLoader />
+          {children}
+        </LoadingProvider>
+      </body>
     </html>
   );
 }
