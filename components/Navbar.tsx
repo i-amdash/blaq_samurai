@@ -87,12 +87,12 @@ const Navbar = () => {
         </button>
 
         {/* Desktop navigation */}
-        <ul className="hidden lg:flex lg:items-center lg:space-x-8 uppercase text-sm font-light">
+        <ul className="hidden lg:flex lg:items-center lg:space-x-8 text-sm font-light">
           <li className="cursor-pointer transition hover:text-gray-300">
             <button onClick={() => handleNavigation('/')}>Home</button>
           </li>
           <li className="cursor-pointer transition hover:text-gray-300">
-            <button onClick={() => handleNavigation('/shop')}>Shop</button>
+            <a href="https://store.blaqsamurai.com/">Shop</a>
           </li>
           <li className="cursor-pointer transition hover:text-gray-300">
             <button onClick={() => handleNavigation('/brand')}>Brand</button>
@@ -106,7 +106,7 @@ const Navbar = () => {
       {/* Mobile menu */}
       {open && (
         <div className="lg:hidden">
-          <ul className="space-y-4 border-t border-white/20 px-4 py-6 backdrop-blur-lg uppercase text-sm font-light"
+          <ul className="space-y-4 border-t border-white/20 px-4 py-6 backdrop-blur-lg text-sm font-light"
             style={{
               backdropFilter: "blur(16px) saturate(180%)",
               backgroundColor: "rgba(6,80,96, 0.45)",
@@ -115,7 +115,7 @@ const Navbar = () => {
               <button onClick={() => handleNavigation('/')}>Home</button>
             </li>
             <li className="cursor-pointer">
-              <button onClick={() => handleNavigation('/shop')}>Shop</button>
+              <a href="https://store.blaqsamurai.com/">Shop</a>
             </li>
             <li className="cursor-pointer">
               <button onClick={() => handleNavigation('/brand')}>Brand</button>

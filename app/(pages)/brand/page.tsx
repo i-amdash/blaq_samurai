@@ -247,13 +247,11 @@ const BrandPage = () => {
 
   return (
     <>
-      <Navbar />
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen bg-white overflow-hidden">
         {/* Hero Section with Carousel */}
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 bg-black/40 z-10" />
 
-          {/* Carousel Images */}
           <div ref={heroRef} className="absolute inset-0">
             {carouselImages.map((image, index) => (
               <div
@@ -273,7 +271,6 @@ const BrandPage = () => {
             ))}
           </div>
 
-          {/* Hero Content */}
           <div className="relative z-20 text-center text-white max-w-4xl px-4">
             <div ref={emblemRef} className="flex justify-center mb-8">
               <Image
@@ -297,7 +294,6 @@ const BrandPage = () => {
             </p>
           </div>
 
-          {/* Carousel Progress Indicators */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30">
             <div className="flex space-x-3">
               {carouselImages.map((_, index) => (
@@ -307,9 +303,7 @@ const BrandPage = () => {
                   className="group relative"
                   aria-label={`Go to slide ${index + 1}`}
                 >
-                  {/* Progress bar background */}
                   <div className="w-12 h-1 bg-white/30 rounded-full overflow-hidden">
-                    {/* Active progress bar */}
                     <div
                       className={`h-full bg-white rounded-full transition-all duration-1000 ${
                         index === currentSlide ? "w-full" : "w-0"
@@ -317,7 +311,6 @@ const BrandPage = () => {
                     />
                   </div>
 
-                  {/* Hover indicator */}
                   <div className="absolute -inset-2 rounded-full border border-white/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </button>
               ))}
@@ -325,7 +318,6 @@ const BrandPage = () => {
           </div>
         </section>
 
-        {/* Rest of your existing sections remain the same */}
         {/* Brand Story Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
