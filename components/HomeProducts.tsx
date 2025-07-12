@@ -83,21 +83,11 @@ const HomeProducts = () => {
               duration: 0.6,
               ease: "power2.out"
             });
-            gsap.to(imageRef.current, {
-              y: -5,
-              duration: 0.6,
-              ease: "power2.out"
-            });
           });
           
           imageRef.current.addEventListener('mouseleave', () => {
             gsap.to(img, {
               scale: 1,
-              duration: 0.6,
-              ease: "power2.out"
-            });
-            gsap.to(imageRef.current, {
-              y: 0,
               duration: 0.6,
               ease: "power2.out"
             });
@@ -165,25 +155,6 @@ const HomeProducts = () => {
           delay: 0.5
         });
       }
-
-      // Floating animation for images
-      gsap.to(leftImageRef.current, {
-        y: -8,
-        duration: 3,
-        ease: "power1.inOut",
-        repeat: -1,
-        yoyo: true,
-        delay: 2
-      });
-
-      gsap.to(rightImageRef.current, {
-        y: 8,
-        duration: 3.5,
-        ease: "power1.inOut",
-        repeat: -1,
-        yoyo: true,
-        delay: 2.5
-      });
 
     });
 

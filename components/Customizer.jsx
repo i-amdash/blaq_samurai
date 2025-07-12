@@ -4,11 +4,12 @@ import { useSnapshot } from 'valtio';
 
 import config from '@/config/config';
 import state from '@/components/store';
-import { homeImage } from '@/utils';
+import { downloadImage, homeImage } from '@/utils';
 import { downloadCanvasToImage, reader } from '@/config/helpers';
 import { EditorTabs, FilterTabs, DecalTypes } from '@/config/constants';
 import { fadeAnimation, slideAnimation } from '@/config/motion';
 import { ColorPicker, CustomButton, FilePicker, Tab } from '@/components';
+import Image from 'next/image';
 
 const Customizer = () => {
   const snap = useSnapshot(state);
@@ -147,6 +148,15 @@ const Customizer = () => {
                 handleClick={() => handleActiveFilterTab(tab.name)}
               />
             ))}
+            <button className='download-btn' onClick={downloadCanvasToImage}>
+              <Image
+                width={20}
+                height={20}
+                src={downloadImage}
+                alt='download_image'
+                className='w-3/5 h-3/5 object-contain'
+              />
+            </button>
           </motion.div>
         </>
       )}

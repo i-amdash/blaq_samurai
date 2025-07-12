@@ -26,6 +26,7 @@ import collectoion1 from '/public/Images/collection1.png';
 import collectoion2 from '/public/Images/collection2.png';
 import collectoion3 from '/public/Images/collection3.png';
 import collectoion4 from '/public/Images/collection4.png';
+import download  from '@/public/Images/download.png';
 
 
 export const homeImage = home;
@@ -55,4 +56,5 @@ export const yellowImage = yellow;
 export const collection1Image = collectoion1;
 export const collection2Image = collectoion2;
 export const collection3Image = collectoion3;
-export const collection4Image = collectoion4; 
+export const collection4Image = collectoion4;
+export const downloadImage = download;
