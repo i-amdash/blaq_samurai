@@ -177,11 +177,11 @@ const HomeProducts = () => {
               priority
             />
             <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <a href="https://store.blaqsamurai.com/" className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
               <span className="text-white text-xl font-light uppercase tracking-wider bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full">
                 View Product
               </span>
-            </div>
+            </a>
           </div>
           
           <div ref={rightImageRef} className="relative h-full w-full overflow-hidden rounded-lg shadow-2xl group cursor-pointer">
@@ -192,20 +192,20 @@ const HomeProducts = () => {
               priority
             />
             <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <a href="https://store.blaqsamurai.com/" className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
               <span className="text-white text-xl font-light uppercase tracking-wider bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full">
                 View Product
               </span>
-            </div>
+            </a>
           </div>
         </div>
       </div>
       
-      <div className="flex flex-row justify-center items-center">
+      <a href="https://store.blaqsamurai.com/" className="flex flex-row justify-center items-center">
         <p ref={ctaTextRef} className="uppercase font-light cursor-pointer text-xl xl:text-3xl hover:text-white/80 transition-colors duration-300 tracking-wider">
           View all products
         </p>
-      </div>
+      </a>
     </section>
   );
 };

@@ -1,4 +1,5 @@
 import AboutSection from "@/components/AboutSection";
+import AnalyticsSection from "@/components/AnalyticsSection";
 import Footer from "@/components/Footer";
 import HomeCollections from "@/components/HomeCollections";
 import HomeProducts from "@/components/HomeProducts";
@@ -18,6 +19,7 @@ export default function RootLayout({
       {children}
       <HomeCollections />
       {/* <Marquee /> */}
+      <AnalyticsSection />
       <AboutSection />
       <NewArrivals />
       <HomeProducts />
