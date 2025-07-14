@@ -264,7 +264,7 @@ const BrandPage = () => {
                   src={image}
                   alt={`Brand Hero ${index + 1}`}
                   fill
-                  className="object-cover object-center"
+                  className="object-cover object-top"
                   priority={index === 0}
                 />
               </div>
@@ -494,7 +494,7 @@ const BrandPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a
-                href="/shop"
+                href="https://store.blaqsamurai.com/"
                 className="bg-white text-primary px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors duration-300"
               >
                 Explore Collection

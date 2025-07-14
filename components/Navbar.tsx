@@ -10,10 +10,17 @@ import Image from "next/image";
 import { logoWhiteImage } from "@/utils";
 import { useLoading } from "@/components/LoadingContext";
 import { useRouter, usePathname } from "next/navigation";
+import { FiSun, FiMoon } from "react-icons/fi";
 
 const Navbar = () => {
   const [mounted, setMounted] = useState(false);
   const [open, setOpen] = useState(false);
+  const [theme, setTheme] = useState<"light" | "dark">("light");
+
+const toggleTheme = () => {
+  setTheme(theme === "light" ? "dark" : "light");
+  // Add your theme switching logic here (e.g., update context, localStorage, or class on <html>)
+};
 
   const { startLoading, stopLoading } = useLoading();
   const router = useRouter();
@@ -58,7 +65,7 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-0 lg:top-10 left-0 z-20 w-full text-white shadow-md lg:shadow-none">
-      <nav className="mx-auto flex h-16 max-w-7xl lg:max-w-fit items-center justify-between px-4 md:px-6 lg:px-16 lg:rounded-full lg:border-primary/20 lg:border lg:shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] lg:justify-center overflow-x-hidden lg:space-x-8" style={{
+      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-6 lg:py-8 lg:px-16 lg:rounded-lg lg:border-primary/20 lg:border lg:shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] lg:justify-between overflow-x-hidden lg:space-x-8" style={{
           backdropFilter: "blur(16px) saturate(180%)",
           backgroundColor: "rgba(6,80,96, 0.25)",
         }}>
@@ -101,6 +108,12 @@ const Navbar = () => {
             <button onClick={() => handleNavigation('/customize')}>Customize</button>
           </li>
         </ul>
+        {/* Theme Switcher icon */}
+<div className="hidden lg:flex items-center space-x-4">
+  <button onClick={toggleTheme} className="text-2xl" aria-label="Toggle theme">
+    {theme === "light" ? <FiMoon /> : <FiSun />}
+  </button>
+</div>
       </nav>
 
       {/* Mobile menu */}
