@@ -7,10 +7,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 const AnalyticsSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const [materials, setMaterials] = useState(0);
-  const [checks, setChecks] = useState(0);
-  const [countries, setCountries] = useState(0);
-  const [deliveries, setDeliveries] = useState(0);
+  const [materials, setMaterials] = useState(30);
+  const [checks, setChecks] = useState(10);
+  const [countries, setCountries] = useState(8);
+  const [deliveries, setDeliveries] = useState(300);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
