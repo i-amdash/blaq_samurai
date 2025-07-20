@@ -109,7 +109,7 @@ const HomeCollections = () => {
       <div
         ref={marqueeRef}
         className="w-full overflow-x-auto z-10 scrollbar-hide"
-        style={{ whiteSpace: "nowrap", scrollBehavior: "auto" }}
+        style={{ whiteSpace: "nowrap", scrollBehavior: "auto", msOverflowStyle: "none",  scrollbarWidth: "none"}}
       >
         <div 
           ref={containerRef}
