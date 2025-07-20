@@ -8,8 +8,8 @@ import { FaFacebook, FaInstagram, FaWhatsapp, FaX } from "react-icons/fa6";
 const Footer = () => {
   return (
     <section className="bg-slate-950 text-white">
-      <div className="max-w-7xl w-full mx-auto py-8 px-8 md:px-8">
-        <div className="flex flex-col md:flex-row md:items-center md:gap-x-64 space-y-16 md:space-y-0 md:space-x-4">
+      <div className="max-w-7xl w-full mx-auto py-8 px-8 xl:px-32">
+        <div className="flex flex-col md:flex-row md:items-center md:gap-x-16 xl:gap-x-64 space-y-16 md:space-y-0 md:space-x-4">
           <div className="flex flex-col items-center">
             <a
               href="/"
