@@ -248,7 +248,7 @@ const AboutSection = () => {
             className="text-sm mt-2 text-justify font-light text-gray-700 dark:text-gray-300 leading-relaxed"
           >
             Step into the rythm of Afrobeat and the spirit of resistance with our Fela Tribute T-shirt.
-            This piece isn't just clothing - it's a statement. Designed to honor the iconic Fela Anikulapo
+            This piece isn&apos;t just clothing - it&apos;s a statement. Designed to honor the iconic Fela Anikulapo
             Kuti, this shirt pays homage to his fealess activism, musical genius and cultural legacy.
           </p>
 

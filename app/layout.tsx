@@ -33,7 +33,7 @@ const aptos = localFont({
   variable: '--font-aptos',
 });
 
-const nunito = Jost({
+const jost = Jost({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
   display: "swap",
