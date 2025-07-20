@@ -102,7 +102,7 @@ const HomeCollections = () => {
   }
 
   return (
-    <section className="relative py-16 bg-background-color dark:bg-dark-bg dark:text-white flex flex-col items-start">
+    <section className="relative py-16 bg-white dark:bg-dark-bg dark:text-white flex flex-col items-start">
       <div className="flex justify-start items-start sm:px-12 px-8 pb-10">
         <h4 className="text-4xl font-[500]">Collections</h4>
       </div>

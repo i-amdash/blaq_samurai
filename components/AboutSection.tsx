@@ -210,7 +210,7 @@ const AboutSection = () => {
   }
 
   return (
-    <section ref={sectionRef} className="relative bg-background-color dark:bg-dark-bg dark:text-white ">
+    <section ref={sectionRef} className="relative bg-white dark:bg-dark-bg dark:text-white ">
       <div className="relative z-10 flex flex-col md:flex-row w-full max-w-7xl md:space-x-4 md:justify-between space-y-8 md:space-y-0 px-8 pb-16 mx-auto">
         {/* Left Column */}
         <div ref={leftColumnRef} className="flex flex-col w-full lg:w-[33%] md:w-[50%]">
