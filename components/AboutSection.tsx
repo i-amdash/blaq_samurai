@@ -213,7 +213,7 @@ const AboutSection = () => {
     <section ref={sectionRef} className="relative bg-background-color dark:bg-dark-bg dark:text-white ">
       <div className="relative z-10 flex flex-col md:flex-row w-full max-w-7xl md:space-x-4 md:justify-between space-y-8 md:space-y-0 px-8 pb-16 mx-auto">
         {/* Left Column */}
-        <div ref={leftColumnRef} className="flex flex-col w-full md:w-[33%]">
+        <div ref={leftColumnRef} className="flex flex-col w-full lg:w-[33%] md:w-[50%]">
           <div
             ref={mainImageRef}
             className="h-full w-full flex overflow-hidden rounded-lg shadow-lg"
@@ -229,7 +229,7 @@ const AboutSection = () => {
         {/* Center Column */}
         <div
           ref={centerColumnRef}
-          className="flex flex-col justify-start items-start md:px-8 w-full md:w-[34%]"
+          className="flex flex-col justify-start items-start md:px-8 w-full lg:w-[34%] md:w-[50%]"
         >
           <h1
             ref={titleRef}
@@ -279,7 +279,7 @@ const AboutSection = () => {
         {/* Right Column */}
         <div
           ref={rightColumnRef}
-          className="md:flex hidden flex-col w-[33%]"
+          className="lg:flex hidden flex-col w-[33%]"
         >
           <div
             ref={mainImageRef}
