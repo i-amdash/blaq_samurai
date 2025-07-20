@@ -47,6 +47,8 @@ const HomeCollections = () => {
   const [isClient, setIsClient] = useState(false);
   const marqueeRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const isInteractingRef = useRef(false);
+  const resumeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     setIsClient(true);
@@ -58,8 +60,6 @@ const HomeCollections = () => {
 
     let animationFrame: number;
     let scrollAmount = 0;
-    let isHovered = false;
-
     const marquee = marqueeRef.current;
     const container = containerRef.current;
     const speed = 1; // px per frame
@@ -68,12 +68,47 @@ const HomeCollections = () => {
     const originalContent = container.innerHTML;
     container.innerHTML = originalContent + originalContent;
 
+    // Handle mouse/touch interaction start
+    const handleInteractionStart = () => {
+      isInteractingRef.current = true;
+      if (resumeTimeoutRef.current) {
+        clearTimeout(resumeTimeoutRef.current);
+      }
+    };
+
+    // Handle mouse/touch interaction end
+    const handleInteractionEnd = () => {
+      // Resume auto-scrolling after a short delay
+      resumeTimeoutRef.current = setTimeout(() => {
+        isInteractingRef.current = false;
+        // Update scrollAmount to match current scroll position to prevent jumps
+        scrollAmount = marquee.scrollLeft;
+      }, 1500); // Wait 1.5s before resuming
+    };
+
+    // Handle manual scroll
+    const handleScroll = () => {
+      if (isInteractingRef.current) {
+        // Update scrollAmount to current position
+        scrollAmount = marquee.scrollLeft;
+        
+        // Handle wrap-around for seamless scrolling
+        const halfWidth = marquee.scrollWidth / 2;
+        if (scrollAmount >= halfWidth) {
+          scrollAmount = 0;
+          marquee.scrollLeft = 0;
+        } else if (scrollAmount <= 0) {
+          scrollAmount = halfWidth - 1;
+          marquee.scrollLeft = scrollAmount;
+        }
+      }
+    };
+
     const animate = () => {
-      if (!isHovered) {
+      if (!isInteractingRef.current) {
         scrollAmount += speed;
         
         // Reset when we've scrolled through the first set of items
-        // This ensures we see all items before resetting
         const halfWidth = marquee.scrollWidth / 2;
         if (scrollAmount >= halfWidth) {
           scrollAmount = 0;
@@ -86,14 +121,25 @@ const HomeCollections = () => {
 
     animate();
 
-    // Pause on hover
-    marquee.addEventListener("mouseenter", () => { isHovered = true; });
-    marquee.addEventListener("mouseleave", () => { isHovered = false; });
+    // Add event listeners for both mouse and touch
+    marquee.addEventListener("mouseenter", handleInteractionStart);
+    marquee.addEventListener("mouseleave", handleInteractionEnd);
+    marquee.addEventListener("touchstart", handleInteractionStart, { passive: true });
+    marquee.addEventListener("touchend", handleInteractionEnd);
+    marquee.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       cancelAnimationFrame(animationFrame);
-      marquee.removeEventListener("mouseenter", () => { isHovered = true; });
-      marquee.removeEventListener("mouseleave", () => { isHovered = false; });
+      if (resumeTimeoutRef.current) {
+        clearTimeout(resumeTimeoutRef.current);
+      }
+      
+      // Remove all event listeners
+      marquee.removeEventListener("mouseenter", handleInteractionStart);
+      marquee.removeEventListener("mouseleave", handleInteractionEnd);
+      marquee.removeEventListener("touchstart", handleInteractionStart);
+      marquee.removeEventListener("touchend", handleInteractionEnd);
+      marquee.removeEventListener("scroll", handleScroll);
     };
   }, [isClient]);
 
@@ -109,8 +155,19 @@ const HomeCollections = () => {
       <div
         ref={marqueeRef}
         className="w-full overflow-x-auto z-10 scrollbar-hide"
-        style={{ whiteSpace: "nowrap", scrollBehavior: "auto", msOverflowStyle: "none",  scrollbarWidth: "none"}}
+        style={{ 
+          whiteSpace: "nowrap", 
+          scrollBehavior: "auto", 
+          msOverflowStyle: "none",
+          scrollbarWidth: "none",
+          WebkitOverflowScrolling: "touch" // Improves mobile scrolling
+        }}
       >
+        <style jsx>{`
+          div::-webkit-scrollbar {
+            display: none;
+          }
+        `}</style>
         <div 
           ref={containerRef}
           className="flex flex-nowrap md:justify-between gap-4 md:gap-8 min-w-max lg:min-w-0"

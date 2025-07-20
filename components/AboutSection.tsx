@@ -1,6 +1,6 @@
 "use client";
 
-import { aboutImage, aboutImage2, aboutImage3, emblemImage } from "@/utils";
+import { aboutImage, aboutImage2, aboutImage3, collection1Image, collection2Image, collection3Image, collection4Image, emblemImage } from "@/utils";
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
 import { GiBloodySword } from "react-icons/gi";
@@ -258,7 +258,7 @@ const AboutSection = () => {
               className="h-[35vh] w-full flex overflow-hidden rounded-lg"
             >
               <Image
-                src={aboutImage2}
+                src={collection1Image}
                 alt="About Image"
                 className="h-full w-full object-contain transition-transform duration-500"
               />
@@ -268,7 +268,7 @@ const AboutSection = () => {
               className="h-[35vh] w-full flex overflow-hidden rounded-lg"
             >
               <Image
-                src={aboutImage3}
+                src={collection2Image}
                 alt="About Image"
                 className="h-full w-full object-contain transition-transform duration-500"
               />
