@@ -56,7 +56,7 @@ const HomeCollections = () => {
   }
 
   return (
-    <section className="relative py-16 bg-background-color dark:bg-dark-bg dark:text-white flex flex-col items-start">
+    <section className="relative py-16 bg-background-color dark:bg-dark-bg dark:text-white flex flex-col items-center md:items-start">
       <div className="flex justify-start items-start sm:px-12 px-8 pb-10">
         <h4 className="text-4xl font-[500]">Collections</h4>
       </div>
@@ -65,7 +65,7 @@ const HomeCollections = () => {
         className="w-full overflow-x-auto z-10 scrollbar-hide"
         style={{ whiteSpace: "nowrap", scrollBehavior: "auto" }}
       >
-        <div className="flex flex-nowrap md:justify-between gap-8 min-w-max lg:min-w-0">
+        <div className="flex flex-nowrap md:justify-between gap-4 md:gap-8 min-w-max lg:min-w-0">
           {/* First Card */}
           <a href="https://store.blaqsamurai.com/collections/custom-orders" className="cursor-pointer flex-shrink-0 flex flex-col group overflow-hidden">
             <div className="h-[25vh] overflow-hidden">
