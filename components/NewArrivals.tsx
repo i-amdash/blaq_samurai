@@ -199,28 +199,28 @@ const NewArrivals = () => {
   }
 
   return (
-    <section ref={sectionRef} className="bg-slate-950 text-white h-screen flex flex-col items-center overflow-hidden">
+    <section ref={sectionRef} className="bg-primary text-white h-screen flex flex-col items-center overflow-hidden">
       <div className="relative flex overflow-x-hidden uppercase w-full justify-between items-center space-x-12">
         <div ref={marqueeRef} className="animate-marquee font-bold flex flex-row justify-between items-center whitespace-nowrap space-x-12 py-8">
-          <span className="mx-4 md:text-5xl text-2xl">New Arrivals</span>
-          <FaStarOfLife className="md:text-5xl text-2xl" />
-          <span className="mx-4 md:text-5xl text-2xl">New Arrivals</span>
-          <FaStarOfLife className="md:text-5xl text-2xl" />
-          <span className="mx-4 md:text-5xl text-2xl">New Arrivals</span>
-          <FaStarOfLife className="md:text-5xl text-2xl" />
-          <span className="mx-4 md:text-5xl text-2xl">New Arrivals</span>
-          <FaStarOfLife className="md:text-5xl text-2xl" />
+          <span className="mx-4 md:text-3xl text-lg">New Arrivals</span>
+          <FaStarOfLife className="md:text-3xl text-lg" />
+          <span className="mx-4 md:text-3xl text-lg">New Arrivals</span>
+          <FaStarOfLife className="md:text-3xl text-lg" />
+          <span className="mx-4 md:text-3xl text-lg">New Arrivals</span>
+          <FaStarOfLife className="md:text-3xl text-lg" />
+          <span className="mx-4 md:text-3xl text-lg">New Arrivals</span>
+          <FaStarOfLife className="md:text-3xl text-lg" />
         </div>
 
         <div ref={marquee2Ref} className="absolute top-0 flex font-bold flex-row justify-between items-center animate-marquee2 whitespace-nowrap space-x-12 py-8">
-          <span className="mx-4 md:text-5xl text-2xl">New Arrivals</span>
-          <FaStarOfLife className="md:text-5xl text-2xl" />
-          <span className="mx-4 md:text-5xl text-2xl">New Arrivals</span>
-          <FaStarOfLife className="md:text-5xl text-2xl" />
-          <span className="mx-4 md:text-5xl text-2xl">New Arrivals</span>
-          <FaStarOfLife className="md:text-5xl text-2xl" />
-          <span className="mx-4 md:text-5xl text-2xl">New Arrivals</span>
-          <FaStarOfLife className="md:text-5xl text-2xl" />
+          <span className="mx-4 md:text-3xl text-lg">New Arrivals</span>
+          <FaStarOfLife className="md:text-3xl text-lg" />
+          <span className="mx-4 md:text-3xl text-lg">New Arrivals</span>
+          <FaStarOfLife className="md:text-3xl text-lg" />
+          <span className="mx-4 md:text-3xl text-lg">New Arrivals</span>
+          <FaStarOfLife className="md:text-3xl text-lg" />
+          <span className="mx-4 md:text-3xl text-lg">New Arrivals</span>
+          <FaStarOfLife className="md:text-3xl text-lg" />
         </div>
       </div>
       
@@ -235,7 +235,7 @@ const NewArrivals = () => {
         />
         {/* Hover overlay */}
         {/* <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg m-8 backdrop-blur-sm flex items-center justify-center">
-          <span className="text-white text-2xl font-light uppercase tracking-wider bg-black/30 backdrop-blur-sm px-8 py-4 rounded-full">
+          <span className="text-white text-lg font-light uppercase tracking-wider bg-black/30 backdrop-blur-sm px-8 py-4 rounded-full">
             Explore Collection
           </span>
         </div> */}

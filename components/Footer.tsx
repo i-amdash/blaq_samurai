@@ -7,9 +7,9 @@ import { FaFacebook, FaInstagram, FaWhatsapp, FaX } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <section className="bg-slate-950 text-white">
+    <section className="bg-primary text-white">
       <div className="max-w-7xl w-full mx-auto py-8 px-8 xl:px-32">
-        <div className="flex flex-col md:flex-row md:items-center md:gap-x-16 xl:gap-x-64 space-y-16 md:space-y-0 md:space-x-4">
+        <div className="flex flex-wrap md:flex-row md:items-center justify-between space-y-16 md:space-y-0 md:space-x-4">
           <div className="flex flex-col items-center">
             <a
               href="/"
@@ -27,14 +27,13 @@ const Footer = () => {
               Samurai
             </p>
           </div>
-          <div className="flex flex-wrap w-full md:flex-row md:items-center justify-between gap-y-16 md:space-x-4">
             <div className="flex flex-col space-y-8">
-              <h4 className="text-lg">Quick links</h4>
+              <h4 className="text-xl">Quick links</h4>
               <ul className="space-y-2">
                 <li>
                   <a
                     href="/"
-                    className="text-sm md:text-base text-white hover:text-gray-300 transition-colors"
+                    className="text-md md:text-base text-white hover:text-gray-300 transition-colors"
                   >
                     Home
                   </a>
@@ -42,7 +41,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="https://store.blaqsamurai.com/"
-                    className="text-sm md:text-base text-white hover:text-gray-300 transition-colors"
+                    className="text-md md:text-base text-white hover:text-gray-300 transition-colors"
                   >
                     Shop
                   </a>
@@ -50,7 +49,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="/brand"
-                    className="text-sm md:text-base text-white hover:text-gray-300 transition-colors"
+                    className="text-md md:text-base text-white hover:text-gray-300 transition-colors"
                   >
                     Brands
                   </a>
@@ -58,7 +57,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="https://store.blaqsamurai.com/collections/custom-orders"
-                    className="text-sm md:text-base text-white hover:text-gray-300 transition-colors"
+                    className="text-md md:text-base text-white hover:text-gray-300 transition-colors"
                   >
                     Custom Orders
                   </a>
@@ -67,12 +66,12 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-col space-y-8">
-              <h4 className="text-lg">Collections</h4>
+              <h4 className="text-xl">Collections</h4>
               <ul className="space-y-2">
                 <li>
                   <a
                     href="https://store.blaqsamurai.com/collections/totem-automobili"
-                    className="text-sm md:text-base text-white hover:text-gray-300 transition-colors"
+                    className="text-md md:text-base text-white hover:text-gray-300 transition-colors"
                   >
                     Totem Automobili
                   </a>
@@ -80,7 +79,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="https://store.blaqsamurai.com/collections/the-orange-collection"
-                    className="text-sm md:text-base text-white hover:text-gray-300 transition-colors"
+                    className="text-md md:text-base text-white hover:text-gray-300 transition-colors"
                   >
                     The Orange Collection
                   </a>
@@ -88,7 +87,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="https://store.blaqsamurai.com/collections/featured-collections"
-                    className="text-sm md:text-base text-white hover:text-gray-300 transition-colors"
+                    className="text-md md:text-base text-white hover:text-gray-300 transition-colors"
                   >
                     District
                   </a>
@@ -96,7 +95,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="https://store.blaqsamurai.com/collections/featured-collections"
-                    className="text-sm md:text-base text-white hover:text-gray-300 transition-colors"
+                    className="text-md md:text-base text-white hover:text-gray-300 transition-colors"
                   >
                     Halo
                   </a>
@@ -140,7 +139,6 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-          </div>
         </div>
       </div>
 

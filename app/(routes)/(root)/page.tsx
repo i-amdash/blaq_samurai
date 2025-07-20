@@ -88,18 +88,6 @@ export default function Home() {
     });
   }, [currentSlide]);
 
-  // Initial emblem animation
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(emblemRef.current, {
-        scale: 0,
-        rotation: 180,
-        duration: 1.2,
-        ease: "back.out(1.7)",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
 
   const { image, title, subtitle, button } = carouselData[currentSlide];
 
@@ -130,16 +118,6 @@ export default function Home() {
 
         {/* Content Overlay */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-10 px-4">
-          <div className="relative z-20 text-center text-white max-w-4xl px-4">
-            <div ref={emblemRef} className="flex justify-center mb-8">
-              <Image
-                src={emblemImage}
-                alt="Blaq Samurai Emblem"
-                className="h-20 w-20 object-contain"
-                priority
-              />
-            </div>
-          </div>
           <h1
             ref={titleRef}
             className="text-4xl md:text-6xl lg:text-7xl max-w-3xl font-bold text-center mb-6 tracking-wider capitalize leading-tight"
