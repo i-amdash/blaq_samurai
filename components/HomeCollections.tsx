@@ -1,11 +1,52 @@
 "use client";
-import { collection1Image, collection2Image, collection3Image, collection4Image, customImage, districtImage, haloImage, orangeCollectionImage, samuraiImage, totemImage } from "@/utils";
-import Image from "next/image";
+import { 
+  customImage, 
+  districtImage, 
+  haloImage, 
+  orangeCollectionImage, 
+  samuraiImage, 
+  totemImage 
+} from "@/utils";
 import React, { useState, useEffect, useRef } from "react";
+import CollectionCard from "./CollectionCard";
+
+const collections = [
+  {
+    href: "https://store.blaqsamurai.com/collections/custom-orders",
+    imageSrc: samuraiImage,
+    altText: "Samurai Collection"
+  },
+  {
+    href: "https://store.blaqsamurai.com/collections/the-orange-collection",
+    imageSrc: districtImage,
+    altText: "District Collection"
+  },
+  {
+    href: "https://store.blaqsamurai.com/collections/featured-collections",
+    imageSrc: orangeCollectionImage,
+    altText: "Orange Collection"
+  },
+  {
+    href: "https://store.blaqsamurai.com/collections/totem-automobili",
+    imageSrc: customImage,
+    altText: "Custom Collection"
+  },
+  {
+    href: "https://store.blaqsamurai.com/collections/totem-automobili",
+    imageSrc: totemImage,
+    altText: "Totem Collection"
+  },
+  {
+    href: "https://store.blaqsamurai.com/collections/totem-automobili",
+    imageSrc: haloImage,
+    altText: "Halo Collection"
+  }
+];
 
 const HomeCollections = () => {
   const [isClient, setIsClient] = useState(false);
   const marqueeRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setIsClient(true);
@@ -13,26 +54,31 @@ const HomeCollections = () => {
 
   // Marquee effect
   useEffect(() => {
-    if (!isClient || !marqueeRef.current) return;
+    if (!isClient || !marqueeRef.current || !containerRef.current) return;
 
     let animationFrame: number;
     let scrollAmount = 0;
     let isHovered = false;
 
     const marquee = marqueeRef.current;
+    const container = containerRef.current;
     const speed = 1; // px per frame
-
-    // Duplicate the content for seamless looping
-    if (marquee.children.length === 4) {
-      marquee.innerHTML += marquee.innerHTML;
-    }
+    
+    // Duplicate content without checking number of children
+    const originalContent = container.innerHTML;
+    container.innerHTML = originalContent + originalContent;
 
     const animate = () => {
       if (!isHovered) {
         scrollAmount += speed;
-        if (scrollAmount >= marquee.scrollWidth / 2) {
+        
+        // Reset when we've scrolled through the first set of items
+        // This ensures we see all items before resetting
+        const halfWidth = marquee.scrollWidth / 2;
+        if (scrollAmount >= halfWidth) {
           scrollAmount = 0;
         }
+        
         marquee.scrollLeft = scrollAmount;
       }
       animationFrame = requestAnimationFrame(animate);
@@ -65,73 +111,18 @@ const HomeCollections = () => {
         className="w-full overflow-x-auto z-10 scrollbar-hide"
         style={{ whiteSpace: "nowrap", scrollBehavior: "auto" }}
       >
-        <div className="flex flex-nowrap md:justify-between gap-4 md:gap-8 min-w-max lg:min-w-0">
-          {/* First Card */}
-          <a href="https://store.blaqsamurai.com/collections/custom-orders" className="w-64 cursor-pointer flex-shrink-0 flex flex-col group overflow-hidden">
-            <div className="h-[25vh] overflow-hidden">
-              <Image
-                src={samuraiImage}
-                alt="collection image"
-                className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-110"
-                priority
-              />
-            </div>
-          </a>
-          {/* Second Card */}
-          <a href="https://store.blaqsamurai.com/collections/the-orange-collection" className="w-64 cursor-pointer flex-shrink-0 flex flex-col group overflow-hidden">
-            <div className="h-[25vh] overflow-hidden">
-              <Image
-                src={districtImage}
-                alt="collection image"
-                className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-110"
-                priority
-              />
-            </div>
-          </a>
-          {/* Third Card */}
-          <a href="https://store.blaqsamurai.com/collections/featured-collections" className="w-64 cursor-pointer flex-shrink-0 flex flex-col group overflow-hidden">
-            <div className="h-[25vh] overflow-hidden">
-              <Image
-                src={orangeCollectionImage}
-                alt="collection image"
-                className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-110"
-                priority
-              />
-            </div>
-          </a>
-          {/* Fourth Card */}
-          <a href="https://store.blaqsamurai.com/collections/totem-automobili" className="w-64 cursor-pointer flex-shrink-0 flex flex-col group overflow-hidden">
-            <div className="h-[25vh] overflow-hidden">
-              <Image
-                src={customImage}
-                alt="collection image"
-                className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-110"
-                priority
-              />
-            </div>
-          </a>
-          {/* Fifth Card */}
-          <a href="https://store.blaqsamurai.com/collections/totem-automobili" className="w-64 cursor-pointer flex-shrink-0 flex flex-col group overflow-hidden">
-            <div className="h-[25vh] overflow-hidden">
-              <Image
-                src={totemImage}
-                alt="collection image"
-                className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-110"
-                priority
-              />
-            </div>
-          </a>
-          {/* Sixth Card */}
-          <a href="https://store.blaqsamurai.com/collections/totem-automobili" className="w-64 cursor-pointer flex-shrink-0 flex flex-col group overflow-hidden">
-            <div className="h-[25vh] overflow-hidden">
-              <Image
-                src={haloImage}
-                alt="collection image"
-                className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-110"
-                priority
-              />
-            </div>
-          </a>
+        <div 
+          ref={containerRef}
+          className="flex flex-nowrap md:justify-between gap-4 md:gap-8 min-w-max lg:min-w-0"
+        >
+          {collections.map((collection, index) => (
+            <CollectionCard 
+              key={index}
+              href={collection.href}
+              imageSrc={collection.imageSrc}
+              altText={collection.altText}
+            />
+          ))}
         </div>
       </div>
     </section>
