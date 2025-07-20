@@ -55,7 +55,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={nunito.className}>
+      <body className={aptos.className}>
       <ThemeProvider> 
         <LoadingProvider>
           <AppLoader />
