@@ -247,7 +247,7 @@ const BrandPage = () => {
 
   return (
     <>
-      <main className="min-h-screen bg-white overflow-hidden">
+      <main className="min-h-screen bg-background-color dark:bg-dark-bg overflow-hidden">
         {/* Hero Section with Carousel */}
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 bg-black/40 z-10" />
@@ -319,14 +319,14 @@ const BrandPage = () => {
         </section>
 
         {/* Brand Story Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4  dark:bg-dark-bg sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div ref={storyRef} className="space-y-8">
-                <h2 className="text-4xl md:text-5xl font-bold text-primary">
+                <h2 className="text-4xl md:text-5xl font-bold text-slate-950 dark:text-white">
                   Our Story
                 </h2>
-                <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
+                <div className="space-y-6 text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
                   <p>
                     Born from the fusion of ancient samurai philosophy and
                     modern streetwear culture, Blaq Samurai represents more than
@@ -360,13 +360,13 @@ const BrandPage = () => {
         </section>
 
         {/* Values Section */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-gray-50 dark:bg-slate-950">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div ref={valuesRef} className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-950 dark:text-white mb-6">
                 Our Values
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
                 The principles that guide every decision, every design, and
                 every stitch
               </p>
@@ -381,8 +381,8 @@ const BrandPage = () => {
                 <div className="bg-white rounded-full w-24 h-24 mx-auto mb-6 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300">
                   <span className="text-3xl font-bold text-primary">義</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Honor</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">Honor</h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                   Integrity in every aspect of our business, from sourcing
                   materials to customer service.
                 </p>
@@ -393,10 +393,10 @@ const BrandPage = () => {
                 <div className="bg-white rounded-full w-24 h-24 mx-auto mb-6 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300">
                   <span className="text-3xl font-bold text-primary">優</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
                   Excellence
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                   Uncompromising quality in design, materials, and craftsmanship
                   that stands the test of time.
                 </p>
@@ -407,10 +407,10 @@ const BrandPage = () => {
                 <div className="bg-white rounded-full w-24 h-24 mx-auto mb-6 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300">
                   <span className="text-3xl font-bold text-primary">新</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
                   Innovation
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                   Pushing boundaries while respecting tradition, creating fresh
                   perspectives on timeless style.
                 </p>
@@ -420,7 +420,7 @@ const BrandPage = () => {
         </section>
 
         {/* Craftsmanship Section */}
-        <section className="py-20">
+        <section className="py-20   dark:bg-dark-bg">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div
@@ -435,10 +435,10 @@ const BrandPage = () => {
                 />
               </div>
               <div ref={craftsmanshipRef} className="space-y-8">
-                <h2 className="text-4xl md:text-5xl font-bold text-primary">
+                <h2 className="text-4xl md:text-5xl font-bold text-slate-950 dark:text-white">
                   Craftsmanship
                 </h2>
-                <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
+                <div className="space-y-6 text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
                   <p>
                     Each Blaq Samurai piece is meticulously crafted by skilled
                     artisans who understand that true quality cannot be rushed.
@@ -458,20 +458,20 @@ const BrandPage = () => {
                   <div className="text-center">
                     <div
                       ref={materialsRef}
-                      className="text-3xl font-bold text-primary"
+                      className="text-3xl font-bold text-slate-950 dark:text-white"
                     >
                       {materials}%
                     </div>
-                    <div className="text-gray-600">Premium Materials</div>
+                    <div className="text-gray-600 dark:text-gray-300">Premium Materials</div>
                   </div>
                   <div className="text-center">
                     <div
                       ref={checksRef}
-                      className="text-3xl font-bold text-primary"
+                      className="text-3xl font-bold text-slate-950 dark:text-white"
                     >
                       {checks}
                     </div>
-                    <div className="text-gray-600">Quality Checks</div>
+                    <div className="text-gray-600 dark:text-gray-300">Quality Checks</div>
                   </div>
                 </div>
               </div>
@@ -480,7 +480,7 @@ const BrandPage = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="py-20 bg-primary text-white">
+        <section className="py-20 bg-slate-950 text-white">
           <div
             ref={ctaRef}
             className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8"

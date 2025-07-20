@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { LoadingProvider } from "@/components/LoadingContext";
 import AppLoader from "@/components/AppLoader";
+import { ThemeProvider } from "@/components/ThemeContext";
 
 const aptos = localFont({
   src: [
@@ -55,10 +56,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={nunito.className}>
+      <ThemeProvider> 
         <LoadingProvider>
           <AppLoader />
           {children}
         </LoadingProvider>
+      </ThemeProvider>
       </body>
     </html>
   );

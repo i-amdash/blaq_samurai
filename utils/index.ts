@@ -27,6 +27,12 @@ import collectoion2 from '/public/Images/collection2.png';
 import collectoion3 from '/public/Images/collection3.png';
 import collectoion4 from '/public/Images/collection4.png';
 import download  from '@/public/Images/download.png';
+import totem from '@/public/Images/Collection Logos/Totem Logo.png';
+import district from '@/public/Images/Collection Logos/Cover-D-234.png';
+import samurai from '@/public/Images/Collection Logos/Blaq Samurai Collection.png';
+import custom from '@/public/Images/Collection Logos/Custom-Order-Badge.png';
+import halo from '@/public/Images/Collection Logos/Halo Collection Logo.png';
+import orangeCollection from '@/public/Images/Collection Logos/The Orange Collection Logo.png';
 
 
 export const homeImage = home;
@@ -58,3 +64,9 @@ export const collection2Image = collectoion2;
 export const collection3Image = collectoion3;
 export const collection4Image = collectoion4;
 export const downloadImage = download;
+export const totemImage = totem;
+export const haloImage = halo;
+export const districtImage = district;
+export const samuraiImage = samurai;
+export const orangeCollectionImage = orangeCollection;
+export const customImage = custom;

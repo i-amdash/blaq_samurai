@@ -199,7 +199,7 @@ const NewArrivals = () => {
   }
 
   return (
-    <section ref={sectionRef} className="bg-primary text-white h-screen flex flex-col items-center overflow-hidden">
+    <section ref={sectionRef} className="bg-slate-950 text-white h-screen flex flex-col items-center overflow-hidden">
       <div className="relative flex overflow-x-hidden uppercase w-full justify-between items-center space-x-12">
         <div ref={marqueeRef} className="animate-marquee font-bold flex flex-row justify-between items-center whitespace-nowrap space-x-12 py-8">
           <span className="mx-4 md:text-5xl text-2xl">New Arrivals</span>

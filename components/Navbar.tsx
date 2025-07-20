@@ -1,9 +1,6 @@
 "use client";
 
-import {
-  FaBars,
-  FaXmark,
-} from "react-icons/fa6";
+import { FaBars, FaXmark } from "react-icons/fa6";
 import { HiOutlineHeart } from "react-icons/hi";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
@@ -11,16 +8,12 @@ import { logoWhiteImage } from "@/utils";
 import { useLoading } from "@/components/LoadingContext";
 import { useRouter, usePathname } from "next/navigation";
 import { FiSun, FiMoon } from "react-icons/fi";
+import { useTheme } from "@/components/ThemeContext";
 
 const Navbar = () => {
   const [mounted, setMounted] = useState(false);
   const [open, setOpen] = useState(false);
-  const [theme, setTheme] = useState<"light" | "dark">("light");
-
-const toggleTheme = () => {
-  setTheme(theme === "light" ? "dark" : "light");
-  // Add your theme switching logic here (e.g., update context, localStorage, or class on <html>)
-};
+  const { theme, toggleTheme } = useTheme();
 
   const { startLoading, stopLoading } = useLoading();
   const router = useRouter();
@@ -29,15 +22,15 @@ const toggleTheme = () => {
   const handleNavigation = (href: string) => {
     // Don't navigate if already on the same page
     if (pathname === href) return;
-    
+
     setOpen(false); // Close mobile menu
     startLoading();
-    
+
     setTimeout(() => {
       router.push(href);
-      
+
       // Only auto-stop loading for non-customize pages
-      if (href !== '/customize') {
+      if (href !== "/customize") {
         setTimeout(() => {
           stopLoading();
         }, 800);
@@ -64,12 +57,14 @@ const toggleTheme = () => {
   }
 
   return (
-    <header className="fixed top-0 lg:top-10 left-0 z-20 w-full text-white shadow-md lg:shadow-none">
-      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-6 lg:py-8 lg:px-16 lg:rounded-lg lg:border-primary/20 lg:border lg:shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] lg:justify-between overflow-x-hidden lg:space-x-8" style={{
+    <header className="absolute top-0 left-0 z-20 w-full text-white shadow-md lg:shadow-none">
+      <nav
+        className="mx-auto flex h-16 items-center justify-between px-4 md:px-6 lg:py-12 lg:px-16 lg:border-primary/20 lg:border lg:shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] lg:justify-between overflow-x-hidden lg:space-x-8"
+        style={{
           backdropFilter: "blur(16px) saturate(180%)",
-          backgroundColor: "rgba(6,80,96, 0.25)",
-        }}>
-        
+          backgroundColor: "rgba(0,0, 20, 0.25)",
+        }}
+      >
         {/* Mobile hamburger */}
         <button
           className="flex items-center lg:hidden"
@@ -84,8 +79,11 @@ const toggleTheme = () => {
         </button>
 
         {/* Logo */}
-        <button onClick={() => handleNavigation('/')} className="text-xl font-semibold md:text-2xl lg:text-3xl">
-          <Image 
+        <button
+          onClick={() => handleNavigation("/")}
+          className="text-xl font-semibold md:text-2xl lg:text-3xl"
+        >
+          <Image
             src={logoWhiteImage}
             alt="Blaq Samurai Logo"
             className="h-8 w-auto lg:h-10 md:h-9"
@@ -94,47 +92,57 @@ const toggleTheme = () => {
         </button>
 
         {/* Desktop navigation */}
-        <ul className="hidden lg:flex lg:items-center lg:space-x-8 text-sm font-light">
-          <li className="cursor-pointer transition hover:text-gray-300">
-            <button onClick={() => handleNavigation('/')}>Home</button>
+        <ul className="hidden lg:flex lg:items-center lg:space-x-8 text-sm uppercase font-light">
+          <li className="cursor-pointer transition uppercase hover:text-gray-300">
+            <button onClick={() => handleNavigation("/")}>HOME</button>
           </li>
           <li className="cursor-pointer transition hover:text-gray-300">
             <a href="https://store.blaqsamurai.com/">Shop</a>
           </li>
           <li className="cursor-pointer transition hover:text-gray-300">
-            <button onClick={() => handleNavigation('/brand')}>Brand</button>
+            <button onClick={() => handleNavigation("/brand")}>BRAND</button>
           </li>
           <li className="cursor-pointer transition hover:text-gray-300">
-            <button onClick={() => handleNavigation('/customize')}>Customize</button>
+            <a href="https://store.blaqsamurai.com/collections/custom-orders">
+              Custom Orders
+            </a>
           </li>
         </ul>
         {/* Theme Switcher icon */}
-<div className="hidden lg:flex items-center space-x-4">
-  <button onClick={toggleTheme} className="text-2xl" aria-label="Toggle theme">
-    {theme === "light" ? <FiMoon /> : <FiSun />}
-  </button>
-</div>
+        <div className="flex items-center space-x-4">
+          <button
+            onClick={toggleTheme}
+            className="text-2xl"
+            aria-label="Toggle theme"
+          >
+            {theme === "light" ? <FiMoon /> : <FiSun />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}
       {open && (
         <div className="lg:hidden">
-          <ul className="space-y-4 border-t border-white/20 px-4 py-6 backdrop-blur-lg text-sm font-light"
+          <ul
+            className="space-y-4 border-t border-white/20 px-4 py-6 backdrop-blur-lg text-sm font-light"
             style={{
               backdropFilter: "blur(16px) saturate(180%)",
               backgroundColor: "rgba(6,80,96, 0.45)",
-            }}>
+            }}
+          >
             <li className="cursor-pointer">
-              <button onClick={() => handleNavigation('/')}>Home</button>
+              <button onClick={() => handleNavigation("/")}>Home</button>
             </li>
             <li className="cursor-pointer">
               <a href="https://store.blaqsamurai.com/">Shop</a>
             </li>
             <li className="cursor-pointer">
-              <button onClick={() => handleNavigation('/brand')}>Brand</button>
+              <button onClick={() => handleNavigation("/brand")}>Brand</button>
             </li>
             <li className="cursor-pointer">
-              <button onClick={() => handleNavigation('/customize')}>Customize</button>
+              <a href="https://store.blaqsamurai.com/collections/custom-orders">
+                Custom Orders
+              </a>
             </li>
           </ul>
         </div>

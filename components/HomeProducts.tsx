@@ -166,13 +166,13 @@ const HomeProducts = () => {
   }
 
   return (
-    <section ref={sectionRef} className="flex flex-col relative space-y-16 bg-white items-center px-8 py-16 text-white h-full overflow-hidden">
+    <section ref={sectionRef} className="flex flex-col relative space-y-16 bg-white dark:bg-dark-bg items-center px-8 py-16 text-white h-full overflow-hidden">
       <div className="absolute inset-0 bg-grain mix-blend-multiply" />
       <div className="w-full max-w-7xl 2xl:px-8">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl text-primary font-semibold text-center mb-8">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl text-slate-950 dark:text-white font-semibold text-center mb-8">
           Featured Products
         </h2>
-        <p className="text-lg md:text-xl lg:text-2xl text-primary text-center mb-12">
+        <p className="text-lg md:text-xl lg:text-2xl text-slate-950 dark:text-white text-center mb-12">
           Discover the unique craftsmanship and quality of Blaq Samurai products.
         </p>
         <div ref={imagesContainerRef} className="xl:h-[70vh] h-full flex flex-col xl:flex-row justify-center items-center space-y-6 xl:space-y-0 xl:space-x-6">
@@ -209,7 +209,7 @@ const HomeProducts = () => {
       </div>
       
       <a href="https://store.blaqsamurai.com/" className="flex flex-row justify-center items-center">
-        <p ref={ctaTextRef} className="uppercase font-light cursor-pointer text-xl xl:text-3xl text-primary hover:text-primary/80 transition-colors duration-300 tracking-wider">
+        <p ref={ctaTextRef} className="uppercase font-light cursor-pointer text-xl xl:text-3xl text-slate-950 dark:text-white hover:text-primary/80 transition-colors duration-300 tracking-wider">
           View all products
         </p>
       </a>

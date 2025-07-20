@@ -8,7 +8,7 @@ import { logoImage } from '@/utils';
 const PageLoader = () => {
   return (
     <motion.div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-primary"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-white dark:bg-slate-950"
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
@@ -34,7 +34,7 @@ const PageLoader = () => {
 
         {/* Brand Name */}
         <motion.h1
-          className="text-3xl md:text-4xl font-bold text-white mb-8 tracking-wider"
+          className="text-3xl md:text-4xl font-bold text-slate-950 dark:text-white mb-8 tracking-wider"
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ 
@@ -56,7 +56,7 @@ const PageLoader = () => {
           {[0, 1, 2].map((i) => (
             <motion.div
               key={i}
-              className="w-3 h-3 bg-white rounded-full"
+              className="w-3 h-3 bg-slate-950 dark:bg-white rounded-full"
               animate={{
                 y: [0, -20, 0],
                 opacity: [0.5, 1, 0.5],
