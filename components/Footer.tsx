@@ -41,7 +41,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="/about"
+                    href="https://store.blaqsamurai.com/"
                     className="text-sm md:text-base text-white hover:text-gray-300 transition-colors"
                   >
                     Shop
@@ -49,7 +49,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="/collections"
+                    href="/brand"
                     className="text-sm md:text-base text-white hover:text-gray-300 transition-colors"
                   >
                     Brands
@@ -57,7 +57,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="/contact"
+                    href="https://store.blaqsamurai.com/collections/custom-orders"
                     className="text-sm md:text-base text-white hover:text-gray-300 transition-colors"
                   >
                     Custom Orders
@@ -71,7 +71,7 @@ const Footer = () => {
               <ul className="space-y-2">
                 <li>
                   <a
-                    href="/"
+                    href="https://store.blaqsamurai.com/collections/totem-automobili"
                     className="text-sm md:text-base text-white hover:text-gray-300 transition-colors"
                   >
                     Totem Automobili
@@ -79,7 +79,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="/about"
+                    href="https://store.blaqsamurai.com/collections/the-orange-collection"
                     className="text-sm md:text-base text-white hover:text-gray-300 transition-colors"
                   >
                     The Orange Collection
@@ -87,7 +87,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="/collections"
+                    href="https://store.blaqsamurai.com/collections/featured-collections"
                     className="text-sm md:text-base text-white hover:text-gray-300 transition-colors"
                   >
                     District
@@ -95,7 +95,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="/contact"
+                    href="https://store.blaqsamurai.com/collections/featured-collections"
                     className="text-sm md:text-base text-white hover:text-gray-300 transition-colors"
                   >
                     Halo
