@@ -56,7 +56,7 @@ const HomeCollections = () => {
   }
 
   return (
-    <section className="relative py-16 bg-background-color dark:bg-dark-bg dark:text-white flex flex-col items-center md:items-start">
+    <section className="relative py-16 bg-background-color dark:bg-dark-bg dark:text-white flex flex-col items-start">
       <div className="flex justify-start items-start sm:px-12 px-8 pb-10">
         <h4 className="text-4xl font-[500]">Collections</h4>
       </div>
@@ -67,7 +67,7 @@ const HomeCollections = () => {
       >
         <div className="flex flex-nowrap md:justify-between gap-4 md:gap-8 min-w-max lg:min-w-0">
           {/* First Card */}
-          <a href="https://store.blaqsamurai.com/collections/custom-orders" className="cursor-pointer flex-shrink-0 flex flex-col group overflow-hidden">
+          <a href="https://store.blaqsamurai.com/collections/custom-orders" className="w-64 cursor-pointer flex-shrink-0 flex flex-col group overflow-hidden">
             <div className="h-[25vh] overflow-hidden">
               <Image
                 src={samuraiImage}
@@ -78,7 +78,7 @@ const HomeCollections = () => {
             </div>
           </a>
           {/* Second Card */}
-          <a href="https://store.blaqsamurai.com/collections/the-orange-collection" className="cursor-pointer flex-shrink-0 flex flex-col group overflow-hidden">
+          <a href="https://store.blaqsamurai.com/collections/the-orange-collection" className="w-64 cursor-pointer flex-shrink-0 flex flex-col group overflow-hidden">
             <div className="h-[25vh] overflow-hidden">
               <Image
                 src={districtImage}
@@ -89,7 +89,7 @@ const HomeCollections = () => {
             </div>
           </a>
           {/* Third Card */}
-          <a href="https://store.blaqsamurai.com/collections/featured-collections" className="cursor-pointer flex-shrink-0 flex flex-col group overflow-hidden">
+          <a href="https://store.blaqsamurai.com/collections/featured-collections" className="w-64 cursor-pointer flex-shrink-0 flex flex-col group overflow-hidden">
             <div className="h-[25vh] overflow-hidden">
               <Image
                 src={orangeCollectionImage}
@@ -100,7 +100,7 @@ const HomeCollections = () => {
             </div>
           </a>
           {/* Fourth Card */}
-          <a href="https://store.blaqsamurai.com/collections/totem-automobili" className="cursor-pointer flex-shrink-0 flex flex-col group overflow-hidden">
+          <a href="https://store.blaqsamurai.com/collections/totem-automobili" className="w-64 cursor-pointer flex-shrink-0 flex flex-col group overflow-hidden">
             <div className="h-[25vh] overflow-hidden">
               <Image
                 src={customImage}
@@ -111,7 +111,7 @@ const HomeCollections = () => {
             </div>
           </a>
           {/* Fifth Card */}
-          <a href="https://store.blaqsamurai.com/collections/totem-automobili" className="cursor-pointer flex-shrink-0 flex flex-col group overflow-hidden">
+          <a href="https://store.blaqsamurai.com/collections/totem-automobili" className="w-64 cursor-pointer flex-shrink-0 flex flex-col group overflow-hidden">
             <div className="h-[25vh] overflow-hidden">
               <Image
                 src={totemImage}
@@ -122,7 +122,7 @@ const HomeCollections = () => {
             </div>
           </a>
           {/* Sixth Card */}
-          <a href="https://store.blaqsamurai.com/collections/totem-automobili" className="cursor-pointer flex-shrink-0 flex flex-col group overflow-hidden">
+          <a href="https://store.blaqsamurai.com/collections/totem-automobili" className="w-64 cursor-pointer flex-shrink-0 flex flex-col group overflow-hidden">
             <div className="h-[25vh] overflow-hidden">
               <Image
                 src={haloImage}
