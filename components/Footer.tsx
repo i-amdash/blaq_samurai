@@ -9,26 +9,25 @@ const Footer = () => {
   return (
     <section className="bg-primary text-white">
       <div className="max-w-7xl w-full mx-auto py-8 px-8 xl:px-32">
-        <div className="flex flex-wrap md:flex-row md:items-center justify-between space-y-16 md:space-y-0 md:space-x-4">
-          <div className="flex flex-col items-center">
-            <a
-              href="/"
-              className="text-xl font-semibold md:text-2xl lg:text-3xl"
-            >
-              <Image
-                src={emblemImage}
-                alt="Blaq Samurai Logo"
-                className="w-auto h-40 md:h-48"
-                priority
-              />
-            </a>
-            <p className="md:text-5xl text-4xl text-center uppercase">
-              Blaq <br />
-              Samurai
-            </p>
+        <div className="flex flex-wrap md:flex-row md:items-center items-center justify-between space-y-16 md:space-y-0 md:space-x-4">
+          <div className="flex flex-col w-[50%] md:w-auto items-center h-[200px] md:h-auto">
+            <div className="mt-3">
+              <a href="/">
+                <Image
+                  src={emblemImage}
+                  alt="Blaq Samurai Logo"
+                  className="w-auto h-36 md:h-40"
+                  priority
+                />
+              </a>
+              <p className="lg:text-5xl text-4xl text-center uppercase">
+                Blaq <br />
+                Samurai
+              </p>
+            </div>
           </div>
-          <div className="flex flex-col space-y-8">
-            <h4 className="text-xl">Quick links</h4>
+          <div className="flex flex-col w-[50%] md:w-auto space-y-8 h-[200px] md:h-auto justify-between">
+            <h4 className="text-xl font-[500]">Quick links</h4>
             <ul className="space-y-2">
               <li>
                 <a
@@ -65,8 +64,8 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="flex flex-col space-y-8">
-            <h4 className="text-xl">Collections</h4>
+          <div className="flex flex-col space-y-8 w-[50%] md:w-auto h-[200px] md:h-auto justify-between">
+            <h4 className="text-xl font-[500]">Collections</h4>
             <ul className="space-y-2">
               <li>
                 <a
@@ -103,8 +102,8 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="flex flex-col space-y-8">
-            <h4 className="text-lg">Follow us on socials</h4>
+          <div className="flex flex-col items-start space-y-8 w-[50%] md:w-auto h-[200px] md:h-auto justify-between">
+            <h4 className="text-lg font-[500]">Follow us on socials</h4>
             <div className="flex flex-col space-y-2">
               <a
                 href="https://www.facebook.com"
