@@ -9,30 +9,31 @@ const Footer = () => {
   return (
     <section className="bg-primary text-white">
       <div className="max-w-7xl w-full mx-auto py-8 px-8 xl:px-32">
-        <div className="flex flex-wrap md:flex-row md:items-center items-center justify-between space-y-16 md:space-y-0 md:space-x-4">
-          <div className="flex flex-col w-[50%] md:w-auto items-center h-[200px] md:h-auto">
-            <div className="mt-3">
-              <a href="/">
-                <Image
-                  src={emblemImage}
-                  alt="Blaq Samurai Logo"
-                  className="w-auto h-36 md:h-40"
-                  priority
-                />
-              </a>
-              <p className="lg:text-5xl text-4xl text-center uppercase">
-                Blaq <br />
-                Samurai
-              </p>
-            </div>
+        <div className="grid grid-cols-2 gap-4 md:flex md:flex-row md:items-start md:justify-between md:space-x-4">
+          {/* Logo Section */}
+          <div className="flex flex-col items-center justify-start h-[200px] md:h-auto md:w-auto">
+            <a href="/" className="mb-2">
+              <Image
+                src={emblemImage}
+                alt="Blaq Samurai Logo"
+                className="w-auto h-24 md:h-40"
+                priority
+              />
+            </a>
+            <p className="text-2xl md:text-4xl lg:text-5xl text-center uppercase leading-tight">
+              Blaq <br />
+              Samurai
+            </p>
           </div>
-          <div className="flex flex-col w-[50%] md:w-auto space-y-8 h-[200px] md:h-auto justify-between">
-            <h4 className="text-xl font-[500]">Quick links</h4>
+
+          {/* Quick Links Section */}
+          <div className="flex flex-col h-[200px] md:h-auto md:w-auto">
+            <h4 className="text-lg md:text-xl font-[500] mb-4">Quick links</h4>
             <ul className="space-y-2">
               <li>
                 <a
                   href="/"
-                  className="text-md md:text-base text-white hover:text-gray-300 transition-colors"
+                  className="text-sm md:text-base text-white hover:text-gray-300 transition-colors"
                 >
                   Home
                 </a>
@@ -40,7 +41,7 @@ const Footer = () => {
               <li>
                 <a
                   href="https://store.blaqsamurai.com/"
-                  className="text-md md:text-base text-white hover:text-gray-300 transition-colors"
+                  className="text-sm md:text-base text-white hover:text-gray-300 transition-colors"
                 >
                   Shop
                 </a>
@@ -48,7 +49,7 @@ const Footer = () => {
               <li>
                 <a
                   href="/brand"
-                  className="text-md md:text-base text-white hover:text-gray-300 transition-colors"
+                  className="text-sm md:text-base text-white hover:text-gray-300 transition-colors"
                 >
                   Brands
                 </a>
@@ -56,7 +57,7 @@ const Footer = () => {
               <li>
                 <a
                   href="https://store.blaqsamurai.com/collections/custom-orders"
-                  className="text-md md:text-base text-white hover:text-gray-300 transition-colors"
+                  className="text-sm md:text-base text-white hover:text-gray-300 transition-colors"
                 >
                   Custom Orders
                 </a>
@@ -64,13 +65,14 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="flex flex-col space-y-8 w-[50%] md:w-auto h-[200px] md:h-auto justify-between">
-            <h4 className="text-xl font-[500]">Collections</h4>
+          {/* Collections Section */}
+          <div className="flex flex-col h-[200px] md:h-auto md:w-auto">
+            <h4 className="text-lg md:text-xl font-[500] mb-4">Collections</h4>
             <ul className="space-y-2">
               <li>
                 <a
                   href="https://store.blaqsamurai.com/collections/totem-automobili"
-                  className="text-md md:text-base text-white hover:text-gray-300 transition-colors"
+                  className="text-sm md:text-base text-white hover:text-gray-300 transition-colors"
                 >
                   Totem Automobili
                 </a>
@@ -78,7 +80,7 @@ const Footer = () => {
               <li>
                 <a
                   href="https://store.blaqsamurai.com/collections/the-orange-collection"
-                  className="text-md md:text-base text-white hover:text-gray-300 transition-colors"
+                  className="text-sm md:text-base text-white hover:text-gray-300 transition-colors"
                 >
                   The Orange Collection
                 </a>
@@ -86,7 +88,7 @@ const Footer = () => {
               <li>
                 <a
                   href="https://store.blaqsamurai.com/collections/featured-collections"
-                  className="text-md md:text-base text-white hover:text-gray-300 transition-colors"
+                  className="text-sm md:text-base text-white hover:text-gray-300 transition-colors"
                 >
                   District
                 </a>
@@ -94,7 +96,7 @@ const Footer = () => {
               <li>
                 <a
                   href="https://store.blaqsamurai.com/collections/featured-collections"
-                  className="text-md md:text-base text-white hover:text-gray-300 transition-colors"
+                  className="text-sm md:text-base text-white hover:text-gray-300 transition-colors"
                 >
                   Halo
                 </a>
@@ -102,38 +104,44 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="flex flex-col items-start space-y-8 w-[50%] md:w-auto h-[200px] md:h-auto justify-between">
-            <h4 className="text-lg font-[500]">Follow us on socials</h4>
+          {/* Social Media Section */}
+          <div className="flex flex-col h-[200px] md:h-auto md:w-auto">
+            <h4 className="text-lg md:text-xl font-[500] mb-4">Follow us on socials</h4>
             <div className="flex flex-col space-y-2">
               <a
                 href="https://www.facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="text-sm md:text-base text-white hover:text-gray-300 transition-colors"
               >
-                <FaFacebook className="inline-block mr-1" />{" "}
+                <FaFacebook className="inline-block mr-2" />
                 <span>Facebook</span>
               </a>
               <a
                 href="https://www.x.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="text-sm md:text-base text-white hover:text-gray-300 transition-colors"
               >
-                <FaX className="inline-block mr-1" /> <span>Twitter</span>
+                <FaX className="inline-block mr-2" />
+                <span>Twitter</span>
               </a>
               <a
                 href="https://www.instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="text-sm md:text-base text-white hover:text-gray-300 transition-colors"
               >
-                <FaInstagram className="inline-block mr-1" />{" "}
+                <FaInstagram className="inline-block mr-2" />
                 <span>Instagram</span>
               </a>
               <a
                 href="https://www.instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="text-sm md:text-base text-white hover:text-gray-300 transition-colors"
               >
-                <FaWhatsapp className="inline-block mr-1" />{" "}
+                <FaWhatsapp className="inline-block mr-2" />
                 <span>Whatsapp</span>
               </a>
             </div>
